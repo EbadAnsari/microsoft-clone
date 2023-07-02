@@ -7,7 +7,12 @@ export default function MicrosoftHome() {
 		<>
 			<Carousel>
 				<Banner
-					bannerImage={["microsoft-app", "avif"]}
+					bannerImage={{
+						lg: "microsoft-app-lg.avif",
+						md: "microsoft-app-md.avif",
+						sm: "microsoft-app-sm.avif",
+					}}
+					// ["microsoft-app", "avif"]
 					textAlign="left"
 					clickButton={{ buttonTitle: "For one person", linkTo: "#" }}
 					linkButton={{
@@ -23,7 +28,11 @@ export default function MicrosoftHome() {
 				</Banner>
 
 				<Banner
-					bannerImage={["banner", "avif"]}
+					bannerImage={{
+						lg: "banner-lg.avif",
+						md: "banner-md.avif",
+						sm: "banner-sm.avif",
+					}}
 					textAlign="right"
 					clickButton={{ buttonTitle: "Learn more", linkTo: "#" }}
 				>
@@ -105,7 +114,11 @@ export default function MicrosoftHome() {
 				className="xbox-game mx-0 mt-20 w-fit sm:mx-4 lg:relative 2xl:mx-auto 2xl:max-w-[90rem]"
 			>
 				<Banner
-					bannerImage={["xbox-game", "avif"]}
+					bannerImage={{
+						lg: "xbox-game-lg.avif",
+						md: "xbox-game-md.avif",
+						sm: "xbox-game-sm.avif",
+					}}
 					textAlign="left"
 					clickButton={{ buttonTitle: "Join Now", linkTo: "#" }}
 				>

@@ -1,8 +1,12 @@
 export type ReactNode = React.ReactNode;
 
 export interface BannerImageInterface {
-	children: [title: ReactNode, description: ReactNode];
-	bannerImage: [name: string, extension: string];
+	children: [title: ReactNode, description?: ReactNode];
+	bannerImage: {
+		lg: string;
+		md?: string;
+		sm?: string;
+	};
 	textAlign: "left" | "right";
 	clickButton?: { buttonTitle: string; linkTo: string };
 	linkButton?: { buttonTitle: string; linkTo: string };

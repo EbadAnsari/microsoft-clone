@@ -1,32 +1,52 @@
 import { PropsWithChildren } from "react";
-import { BannerImageInterface } from "@interfaces/interface";
+import { BannerImageInterface, ReactNode } from "@interfaces/interface";
 import Button from "@basic-components/Button";
 
 export function Banner({
-	bannerImage: [name, extension],
+	bannerImage,
 	children,
 	textAlign,
 	clickButton,
 	linkButton,
 }: BannerImageInterface & PropsWithChildren) {
-	const [Title, Description] = children;
+	let Title: ReactNode,
+		Description: ReactNode = <></>;
+
+	if (Array.isArray(children)) {
+		Title = children;
+	} else {
+		Title = children[0];
+		Description = children[1];
+	}
+
+	let fixedImage = true;
+	if (bannerImage.sm) {
+		fixedImage = false;
+	}
 
 	return (
 		<section className="mx-auto w-fit lg:relative xl:max-w-[calc(100vw_-_1px)]">
 			<div className="flex justify-center">
-				<img
-					src={`/assets/sm-md-lg-images/${name}-lg.${extension}`}
-					className="hidden lg:block"
-				/>
-				<img
-					src={`/assets/sm-md-lg-images/${name}-md.${extension}`}
-					className="hidden sm:block lg:hidden"
-				/>
-				<img
-					src={`/assets/sm-md-lg-images/${name}-sm.${extension}`}
-					className="block w-full sm:hidden"
-				/>
+				{fixedImage ? (
+					<img src={`assets/${bannerImage.lg}`} className="w-full" />
+				) : (
+					<>
+						<img
+							src={`assets/sm-md-lg-images/${bannerImage.lg}`}
+							className="hidden lg:block"
+						/>
+						<img
+							src={`assets/sm-md-lg-images/${bannerImage.md}`}
+							className="hidden sm:block lg:hidden"
+						/>
+						<img
+							src={`assets/sm-md-lg-images/${bannerImage.sm}`}
+							className="block w-full sm:hidden"
+						/>
+					</>
+				)}
 			</div>
+
 			<div
 				className={`${
 					textAlign === "right" ? "left-1/2" : "left-0"
