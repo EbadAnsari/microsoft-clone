@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	/* @apply scroll-smooth outline-1 outline-[#adff2f]; */
+}
+
+.cross {
+	@apply space-y-0 p-0;
+}
+.cross .line:nth-child(odd) {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+}
+.cross .line:nth-child(1) {
+	@apply rotate-45;
+}
+.cross .line:nth-child(3) {
+	@apply -rotate-45;
+}
+.cross .line:nth-child(2) {
+	@apply hidden;
+}
+
+@layer components {
+	.link-underline {
+		@apply lg:relative lg:cursor-pointer;
+	}
+
+	.link-underline::before {
+		content: "";
+		@apply lg:absolute lg:top-full lg:h-[0.1rem] lg:w-full lg:bg-black lg:opacity-0;
+	}
+
+	.link-underline:hover::before {
+		@apply lg:opacity-100;
+	}
+}
+
+.temp {
+	@apply lg:text-white;
+}
+
+.slider {
+	@apply flex snap-x snap-mandatory scroll-m-0 scroll-p-0 overflow-x-hidden;
+}
+
+.content {
+	min-width: 100%;
+	min-height: fit-content;
+	@apply snap-start;
+}
+
+li {
+	transition: background-color 300ms ease;
+}
+
+li.active {
+	@apply bg-black;
+}
