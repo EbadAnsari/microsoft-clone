@@ -31,3 +31,6 @@ dist-ssr
 
 # ATM directories
 src/ATM/*
+
+# temp files
+temp*
