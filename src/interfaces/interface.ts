@@ -1,7 +1,7 @@
 export type ReactNode = React.ReactNode;
 
 export interface BannerImageInterface {
-	children: [title: ReactNode, description?: ReactNode];
+	children: [title: ReactNode, description: ReactNode];
 	bannerImage: {
 		lg: string;
 		md?: string;

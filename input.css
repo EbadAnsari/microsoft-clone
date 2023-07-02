@@ -61,3 +61,7 @@ li {
 li.active {
 	@apply bg-black;
 }
+
+.test {
+	/* @apply text-black mix-blend-difference; */
+}

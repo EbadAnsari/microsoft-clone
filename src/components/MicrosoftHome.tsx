@@ -6,42 +6,50 @@ export default function MicrosoftHome() {
 	return (
 		<>
 			<Carousel>
-				<Banner
-					bannerImage={{
-						lg: "microsoft-app-lg.avif",
-						md: "microsoft-app-md.avif",
-						sm: "microsoft-app-sm.avif",
-					}}
-					// ["microsoft-app", "avif"]
-					textAlign="left"
-					clickButton={{ buttonTitle: "For one person", linkTo: "#" }}
-					linkButton={{
-						buttonTitle: "For up to six people >",
-						linkTo: "#",
-					}}
-				>
-					<BannerTitle>Microsoft 365</BannerTitle>
-					<BannerDescription>
-						Turn your ideas into reality, stay safer online and off,
-						and focus on what matters most with Microsoft 365 apps.
-					</BannerDescription>
-				</Banner>
+				<div className="mx-auto xl:max-w-[100rem]">
+					<Banner
+						bannerImage={{
+							lg: "microsoft-app-lg.avif",
+							md: "microsoft-app-md.avif",
+							sm: "microsoft-app-sm.avif",
+						}}
+						// ["microsoft-app", "avif"]
+						textAlign="left"
+						clickButton={{
+							buttonTitle: "For one person",
+							linkTo: "#",
+						}}
+						linkButton={{
+							buttonTitle: "For up to six people >",
+							linkTo: "#",
+						}}
+					>
+						<BannerTitle>Microsoft 365</BannerTitle>
+						<BannerDescription>
+							Turn your ideas into reality, stay safer online and
+							off, and focus on what matters most with Microsoft
+							365 apps.
+						</BannerDescription>
+					</Banner>
+				</div>
 
-				<Banner
-					bannerImage={{
-						lg: "banner-lg.avif",
-						md: "banner-md.avif",
-						sm: "banner-sm.avif",
-					}}
-					textAlign="right"
-					clickButton={{ buttonTitle: "Learn more", linkTo: "#" }}
-				>
-					<BannerTitle>Surface Pro 9</BannerTitle>
-					<BannerDescription>
-						Tablet versatility and laptop power — all in one
-						ultra-portable device.
-					</BannerDescription>
-				</Banner>
+				<div className="mx-auto xl:max-w-[100rem]">
+					<Banner
+						bannerImage={{
+							lg: "banner-lg.avif",
+							md: "banner-md.avif",
+							sm: "banner-sm.avif",
+						}}
+						textAlign="right"
+						clickButton={{ buttonTitle: "Learn more", linkTo: "#" }}
+					>
+						<BannerTitle>Surface Pro 9</BannerTitle>
+						<BannerDescription>
+							Tablet versatility and laptop power — all in one
+							ultra-portable device.
+						</BannerDescription>
+					</Banner>
+				</div>
 			</Carousel>
 
 			<div className="mx-auto mt-28 flex w-fit flex-wrap justify-center gap-8 lg:mt-32 [&>a]:underline">
@@ -111,7 +119,7 @@ export default function MicrosoftHome() {
 			</section>
 			<section
 				id="xbox"
-				className="xbox-game mx-0 mt-20 w-fit sm:mx-4 lg:relative 2xl:mx-auto 2xl:max-w-[90rem]"
+				className="xbox-game mx-2 mt-20 w-fit sm:mx-2 lg:relative 2xl:mx-auto 2xl:max-w-[90rem]"
 			>
 				<Banner
 					bannerImage={{
