@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import { BannerImageInterface, BasicObject } from "@interfaces/interface";
+import { BannerImageInterface } from "@interfaces/interface";
 import Button from "@basic-components/Button";
 
 export function Banner({
@@ -33,11 +33,7 @@ export function Banner({
 				} top-1/2 flex -translate-y-1.5 justify-center bg-white shadow-md md:mx-3 md:-translate-y-10 lg:absolute lg:w-1/2 lg:-translate-y-1/2 lg:bg-transparent lg:shadow-none`}
 			>
 				<div className={`px-5 py-10 md:px-10 lg:px-16 xl:px-28`}>
-					{/* <h3 className="mb-6 text-2xl font-semibold lg:text-[2.3rem]">
-                        {bannerTitle}
-                    </h3> */}
 					{Title}
-					{/* <p className="mb-6 text-lg lg:text-base">{bannerText}</p> */}
 					{Description}
 
 					<div className="flex flex-wrap items-center gap-4">

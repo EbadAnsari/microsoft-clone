@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FooterLinks from "../footer/FooterLinks";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
 	const [dropdown, setDropdown] = useState({
@@ -172,9 +173,12 @@ export default function NavBar() {
 						searchBar === "hidden" ? "flex" : "hidden"
 					} lg:w-fit lg:-translate-y-1/2 lg:translate-x-0 lg:space-x-4 [&>a.link-underline]:block [&>a.link-underline]:border-b lg:[&>a.link-underline]:border-b-0`}
 				>
-					<a className="link-underline text-md cursor-pointer bg-[#f2f2f2] py-4 pl-6 text-black lg:bg-transparent lg:p-0 lg:text-[0.8rem]">
+					<Link
+						to={"microsoft-365"}
+						className="link-underline text-md cursor-pointer bg-[#f2f2f2] py-4 pl-6 text-black lg:bg-transparent lg:p-0 lg:text-[0.8rem]"
+					>
 						Microsoft 365
-					</a>
+					</Link>
 					<a className="link-underline text-md cursor-pointer bg-[#f2f2f2] py-4 pl-6 text-black lg:bg-transparent lg:p-0 lg:text-[0.8rem]">
 						Teams
 					</a>
